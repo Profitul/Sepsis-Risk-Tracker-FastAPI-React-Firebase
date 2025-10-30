@@ -3,7 +3,7 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA9oLix1qO8ejHIYs4lnd5il1AXdW7zWB0",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "sepsis-1440p.firebaseapp.com",
   projectId: "sepsis-1440p",
   storageBucket: "sepsis-1440p.appspot.com", // 🔧 corectat domeniul (era greșit)

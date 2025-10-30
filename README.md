@@ -19,14 +19,14 @@ FEATURES
 
 PROJECT STRUCTURE
 sepsis/
-├─ backend/     FastAPI backend + Firebase integration
-│  ├─ main.py
-│  ├─ firebase_client.py
-│  ├─ requirements.txt
-│  └─ .env.example
-└─ frontend/    React + TailwindCSS + Firebase frontend
-   ├─ package.json
-   └─ src/
+├─ backend/ # FastAPI + Firebase API
+│ ├─ main.py
+│ ├─ firebase_client.py
+│ ├─ requirements.txt
+│ └─ .env.example
+└─ frontend/ # React + Tailwind + Firebase
+├─ package.json
+└─ src/
 
 ------------------------------------------------------------
 

@@ -1,51 +1,67 @@
-# Sepsis Risk Tracker – FastAPI + React + Firebase
+# Sepsis Risk Tracker
+FastAPI + React + Firebase
 
-Full-stack application for sepsis monitoring.
-FastAPI backend using Firebase Authentication and Firestore Database.
-React frontend with TailwindCSS.
+Full-stack clinical monitoring web application for detecting and tracking potential sepsis risk.
+Includes secure user authentication, protected backend routes, and real-time Firestore database
+management.
 
----
+------------------------------------------------------------
 
-## 📌 Project Structure
+FEATURES
+- User authentication using Firebase Authentication
+- Firestore database for storing patient records
+- FastAPI backend with JWT-based security
+- React + TailwindCSS frontend
+- CI workflow using GitHub Actions
+- Secure environment variable handling (.env files not committed)
+
+------------------------------------------------------------
+
+PROJECT STRUCTURE
 sepsis/
-├─ backend/ # FastAPI + Firebase API
-│ ├─ main.py
-│ ├─ firebase_client.py
-│ ├─ requirements.txt
-│ └─ .env.example
-└─ frontend/ # React + Tailwind
-├─ package.json
-└─ src/
+├─ backend/     FastAPI backend + Firebase integration
+│  ├─ main.py
+│  ├─ firebase_client.py
+│  ├─ requirements.txt
+│  └─ .env.example
+└─ frontend/    React + TailwindCSS + Firebase frontend
+   ├─ package.json
+   └─ src/
 
----
+------------------------------------------------------------
 
-## ✅ Backend Setup (FastAPI + Firebase)
+GETTING STARTED
 
+1) Backend Setup
 cd backend
 python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+.\.venv\Scripts\activate   (Windows cmd)
 pip install -r requirements.txt
 
-Copy .env.example to .env:
-Copy-Item .env.example .env
+Copy environment template:
+copy .env.example .env
 
-Make sure this line points to your local Firebase key file:
-GOOGLE_APPLICATION_CREDENTIALS=backend/firebase_key.json
+Run backend server:
+uvicorn main:app --reload --port 8000
 
-Run server:
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
-## ✅ Frontend Setup (React + Tailwind)
-
+2) Frontend Setup
 cd frontend
-npm ci
+npm install
 npm start
 
-## Build Frontend (Production)
+Frontend runs on: http://localhost:3000
+Backend runs on: http://localhost:8000
 
-npm run build
+------------------------------------------------------------
 
-## ✅ GitHub Actions (CI)
+FUTURE IMPROVEMENTS
+- Add structured sepsis scoring based on lab values
+- Real-time alerts and notifications
+- Dashboard analytics with risk evolution graphs
+- Doctor and Patient role-based access control
 
-CI workflow checks backend deps and builds frontend.
-File: .github/workflows/ci.yml
+------------------------------------------------------------
+
+LICENSE
+This project is released under the MIT License.
